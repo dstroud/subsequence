@@ -89,7 +89,31 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
  - **Chord/Pattern Arranger switch**  The button in the bottom right corner switches back to the Chord View.
 
 
+## Variant Notes
+
+### Just Friends
+- Just using 3 voices here although you can play with adding more voices by modifying X.
+- Although chords will be held, JF's envelope will limit how long they play when Transient mode is engaged.
+- Alternatively, Sustain mode may be used with an envelope triggered by Teletype's TR 1.	
+	
+### Disting EX SD Multisample
+- Alternates between voices 1-3 and 4-6 so you can use EX's Release parameter to have some overlapping chords. Nice for acoustic samples with a long tail, strings, etc...
+- There seem to be issues with some EX ops. Update EX if you're having issues with notes hanging (EX.AO didnt' work until I updated).
+
+### Disting EX Poly Wavetable Synth
+- Again, make sure EX firmware is updated. This was a quick mod and it wasn't even clear if the utilizes ops are supposed to work with this algo so YMMV. 
+
+### i2c2midi
+- Requires [Teletype I2M BETA 2 firmware](https://github.com/attowatt/i2c2midi/tree/main/firmware/teletype_firmware)
+- Script $ 2 does a hacky job translating N.CS into the I2M.C op so you can then apply chord transformations. 
+- While X can be changed to extend the number of intervals in the chord output, it can also throw off the Sync used for Every X in $ 3. You will also need to change the chord length for the i2m variant using I2M.C.L.
+- Strumming in I2M mode doesn't always work as expected, likely because of the method of holding notes until the next note is played.
+
+
 ## Addendum
+
+
+![Subsequence flow](https://raw.githubusercontent.com/dstroud/subsequence/60eaadfa3bcb4954c74ffa0008013ef1d305bf59/Subsequence.drawio.svg)
 
 ### Script hacking notes
 - $ 2 Outputs the chords via i2c and CV 1-3 and is the only difference between the scene variants.
@@ -108,3 +132,6 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 - PRT 7 Harmonizer intervals (3/4)
 - P 63/PRT 8 Scale (0-8)
 - PRT 9 Last sent velocity
+
+### Broken Stuff
+- Currently there is no indication when a reset has occurred. Not ideal but there's not much room to improve this at the moment.
