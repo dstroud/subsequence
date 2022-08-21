@@ -12,8 +12,9 @@ IMPORTANT: Subsequence requires multiple scenes to operate! The "Launcher" scene
 
 Two versions of the Launcher are included depending on whether you have an i2c2midi (I2M) module or not:
 
-subsequence_launcher_i2m.txt    **Use this if you have i2c2midi and have installed the I2M Beta 2 firmware on Teletype.**
-subsequence_launcher.txt        **Use this if you don’t have i2c2midi.**
+- **subsequence_launcher_i2m.txt**    Use this if you have installed the I2M Beta 2 firmware
+
+- **subsequence_launcher.txt**        Use this if you don’t have i2c2midi
 
 
 ## Installation
