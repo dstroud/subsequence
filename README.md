@@ -22,25 +22,25 @@ If you don't have any i2c modules, any of the above variants will still output C
 
 Two versions of the Launcher are included depending on whether you have an i2c2midi (I2M) module or not:
 
-- **subsequence_launcher_i2m.txt**    Use this if you have installed the I2M Beta 2 firmware
+- **tt00_subsequence_launcher_i2m.txt**    Use this if you have installed the I2M Beta 2 firmware
 
-- **subsequence_launcher.txt**        Use this if you don’t have i2c2midi
+- **tt00_subsequence_launcher.txt**        Use this if you don’t have i2c2midi
 
 
 ## Installation
 
-1. Download the launcher .txt file and rename it to the scene slot you wish to overwrite (e.g. tt10.txt). 
+1. Download the correct launcher .txt file and rename it to the scene slot you wish to overwrite (e.g. tt00.txt). 
 2. Install the variant scenes you want to use and rename the .txt using the following structure:
 
     | Scene          | Scene Slot | Ex. Filename | Launcher $ |
     |----------------|------------|--------------|------------|
-    | Launcher       | x          | tt10.txt     | n/a        |
-    | Just Friends   | x+1        | tt11.txt     | Script 1   |
-    | EX Multisample | x+2        | tt12.txt     | Script 2   |
-    | EX Wavetable   | x+3        | tt13.txt     | Script 3   |
-    | i2c2midi       | x+4        | tt15.txt     | Script 4   |
+    | Launcher       | x          | tt00.txt     | n/a        |
+    | Just Friends   | x+1        | tt01.txt     | Script 1   |
+    | EX Multisample | x+2        | tt02.txt     | Script 2   |
+    | EX Wavetable   | x+3        | tt03.txt     | Script 3   |
+    | i2c2midi       | x+4        | tt05.txt     | Script 4   |
 
-    You’re welcome to exclude or re-order scenes as you see fit, just be sure to go into the Launcher .txt file and delete or move the contents of the associated script (1-4) into whatever script matches the scene’s new location. E.g., if you only want to install the i2c2midi variant, you can load the launcher as tt10.txt, the i2c2midi scene as tt11.txt, and then copy the contents of the Launcher script 4 into script 1. You may also edit the scene description and the last number in the "G.GBX…" line in the Launcher’s Init script to reflect the total number of variant scenes installed.
+    You’re welcome to exclude or re-order scenes as you see fit, just be sure to go into the Launcher .txt file and delete or move the contents of the associated script (1-4) into whatever script matches the scene’s new location. E.g., if you only want to install the i2c2midi variant, you can load the launcher as tt00.txt, the i2c2midi scene as tt01.txt, and then copy the contents of the Launcher's script 4 into script 1. You may also edit the scene description and the last number in the "G.GBX…" line in the Launcher’s Init script to reflect the total number of variant scenes installed.
 
 
 3. Once the scenes have been renamed, drop them on a thumb drive and plug into into Teletype. Make sure to delete those files off the thumb drive afterward so you don’t inadvertently overwrite a scene the next time you plug in the drive.
