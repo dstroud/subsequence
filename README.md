@@ -109,15 +109,17 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 - While X can be changed to extend the number of intervals in the chord output, it can also throw off the Sync used for Every X in $ 3. You will also need to change the chord length for the i2m variant using I2M.C.L.
 - Strumming in I2M mode doesn't always work as expected, likely because of the method of holding notes until the next note is played.
 
+### Creating New Variants
+- To make variants for other polyphonic i2c devices, you'll likely just need to change script $ 2.
+- If you'd like to send the harmonizer output somewhere other than CV 4 (like to an i2c device), change script $ 3.
+- Be sure to update the Launcher scene, a couple of scripts have been left available for this.
+
 
 ## Addendum
 
 
 ![Subsequence flow](https://raw.githubusercontent.com/dstroud/subsequence/60eaadfa3bcb4954c74ffa0008013ef1d305bf59/Subsequence.drawio.svg)
 
-### Script hacking notes
-- $ 2 Outputs the chords via i2c and CV 1-3 and is the only difference between the scene variants.
-- $ 3 Harmonizer script. Change this if you want to send the output of the harmonizer somewhere other than CV 4.
 
 ### Variables
 - A Chord octave (0/1)
