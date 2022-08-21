@@ -1,7 +1,15 @@
 # Subsequence
 A chord sequencer and CV-harmonizer for Monome Teletype + Grid
 
+
+
+
 Tutorial: Forthcoming at https://www.youtube.com/modularbeat 
+
+
+## Introduction
+
+Subsequence is a chord-based sequencer with a harmonizer function that is fed from an external CV source. With it, you can quickly create up to 4 chord progressions, sequence those into a composition using the Pattern Arranger, then send the chords out over i2c and CV 1-3 while CV 4 carries the output of the harmonizer. Even if you don't have polyphonic sound sources, the harmonizer is a fun way to explore adding chord-based structure to your Eurorack system.
 
 IMPORTANT: Subsequence requires multiple scenes to operate! The "Launcher" scene is mandatory and must be used to load the scene variants which are tuned for the following i2c-capable modules:
 
