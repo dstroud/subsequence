@@ -18,6 +18,8 @@ IMPORTANT: Subsequence requires multiple scenes to operate! The "Launcher" scene
 - Disting EX Poly Wavetable Synth
 - i2c2midi (requires [Teletype I2M BETA 2 firmware](https://github.com/attowatt/i2c2midi/tree/main/firmware/teletype_firmware))
 
+If you don't have any i2c modules, any of the above variants will still output CV and triggers equally well.
+
 Two versions of the Launcher are included depending on whether you have an i2c2midi (I2M) module or not:
 
 - **subsequence_launcher_i2m.txt**    Use this if you have installed the I2M Beta 2 firmware
@@ -135,5 +137,6 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 - P 63/PRT 8 Scale (0-8)
 - PRT 9 Last sent velocity
 
-### Broken Stuff
+### Work In Progress
 - Currently there is no indication when a reset has occurred. Not ideal but there's not much room to improve this at the moment.
+- A CV-only variant will likely be made at some point, allowing for more chord voicing using the param knob (see [MINIM](https://github.com/dstroud/minim)).
