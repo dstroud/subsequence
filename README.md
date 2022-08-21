@@ -61,11 +61,10 @@ Two versions of the Launcher are included depending on whether you have an i2c2m
 - **Param Knob** Used to set velocity of the i2c chord output. Note that the readout on the Teletype dashboard is for the last-sent chord. Levels can get quite hot so turn this down if you’re hearing unwanted distortion.
 
 
-## Grid UX
+## Grid Chord View
+![subsequence_chord_view](https://user-images.githubusercontent.com/435570/185812855-325d6ab6-e8ec-49ed-b29f-088b203a5051.svg)
 
 After choosing an option from the Launcher, you’ll find yourself in the Chord View.
-
-### Chord View
 
 - **Chord Sequence** Columns 1-14 are the Chord Sequence, which plays from top to bottom. The first 7 columns correspond to chords 1-7 in the N.CS op. Columns 8-14 are the same chords played one octave higher. Blank steps will hold the previously-played chord without re-triggering.
 - **Sequence End/Loop** Column 15 sets the end/loop point for the Chord Sequence.
@@ -73,7 +72,8 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 - **Follow Mode toggle** Row 6 on column 16 enables (bright) or disables (dim) Follow Mode. When Follow Mode is enabled, the active pattern is determined by the Pattern Arranger. When disabled, the current chord sequence will loop indefinitely.
 - **Chord/Pattern Arranger switch** _The button in the bottom right corner switches between Chord View and Pattern Arranger View.
 
-### Pattern Arranger View
+## Grid Pattern Arranger View
+![subsequence_arranger_view](https://user-images.githubusercontent.com/435570/185812860-f948bdf3-9ecd-4070-86c5-596537456bbe.svg)
 
 - **Pattern Arranger** Rows 1-4 are the Pattern Arranger, where each row corresponds to patterns 1-4 in the Chord View. The Pattern Arranger progresses from left-to-right when Follow Mode is enabled. The Pattern Arranger loops to step 1 once it reaches the first blank column (i.e each step must be explicity set since there are no buttons to set loop length directly).
 - **Follow Mode toggle** As in Chord View, row 6 on column 16 enables (bright) or disables (dim) Follow Mode. When Follow Mode is enabled, the active pattern is determined by the Pattern Arranger. When disabled, the current chord sequence will loop indefinitely.
