@@ -49,7 +49,7 @@ Two versions of the Launcher are included depending on whether you have an i2c2m
 
 ## Patching
 
-- **IN** Send CV from an external sequencer, function generator, etc… into IN. A change of 1/12v (1 semitone) here results in change of 1 interval out on CV 4. Voltage is sampled when a trigger is recieved on IN 3.
+- **IN** Send CV from an external sequencer, function generator, etc… into IN. A change of 1/12v (1 semitone) here results in change of 1 interval (based on the underlying chord) sent out on CV 4. Voltage is sampled when a trigger is recieved on IN 3.
 - **IN 1** Send triggers into IN 1 to advance the chord sequence.
 - **IN 2** To stop chord notes, send a trigger to IN 2 (useful if you have a sequencer/clock that outputs a trigger on stop such as Pamela’s New Workout).
 - **IN 3** Send triggers to IN 3 to sample CV from IN. Make sure triggers come after the pitch (may need to add a bit of trigger delay if results are unpredictable).
