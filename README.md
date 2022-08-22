@@ -4,7 +4,7 @@ A chord sequencer and CV-harmonizer for Monome Teletype + Grid
 
 
 
-[Tutorial available on YouTube](https://youtu.be/LZR31Iy8nas)
+[Tutorial available on YouTube](https://youtu.be/BKh8ZLkSvl4)
 
 
 ## Introduction
