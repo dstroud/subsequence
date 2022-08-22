@@ -4,7 +4,7 @@ A chord sequencer and CV-harmonizer for Monome Teletype + Grid
 
 
 
-Tutorial: Forthcoming at https://www.youtube.com/modularbeat 
+[Tutorial available on YouTube](https://youtu.be/LZR31Iy8nas)
 
 
 ## Introduction
