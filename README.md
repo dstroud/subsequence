@@ -140,3 +140,4 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 ### Work In Progress
 - Currently there is no indication when a reset has occurred. Not ideal but there's not much room to improve this at the moment.
 - A CV-only variant will likely be made at some point, allowing for more chord voicing using the param knob (see [MINIM](https://github.com/dstroud/minim)).
+- Can get stuck MIDI notes when changing scales. Whoops- I'll look into it.
