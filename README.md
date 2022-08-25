@@ -11,14 +11,15 @@ A chord sequencer and CV-harmonizer for Monome Teletype + Grid
 
 Subsequence is a chord-based sequencer with a harmonizer function that is fed from an external CV source. With it, you can quickly create up to 4 chord progressions, sequence those into a composition using the Pattern Arranger, then send the chords out over i2c and CV 1-3 while CV 4 carries the output of the harmonizer. Even if you don't have polyphonic sound sources, the harmonizer is a fun way to explore adding chord-based structure to your Eurorack system.
 
-IMPORTANT: Subsequence requires multiple scenes to operate! The "Launcher" scene is mandatory and must be used to load the scene variants which are tuned for the following i2c-capable modules:
+IMPORTANT: Subsequence requires multiple scenes to operate! The "Launcher" scene is mandatory and must be used to load the scene variants which are tuned for the following chord-producing modules:
 
 - Just Friends
 - Disting EX SD Multisample
 - Disting EX Poly Wavetable Synth
 - i2c2midi (requires [Teletype I2M BETA 2 firmware](https://github.com/attowatt/i2c2midi/tree/main/firmware/teletype_firmware))
+- Plaits (requires alternate firmware to enable Teletype chords)
 
-If you don't have any i2c modules, any of the above variants will still output CV and triggers equally well.
+If you don't have any of the above modules, any version will still output CV and triggers equally well.
 
 Two versions of the Launcher are included depending on whether you have an i2c2midi (I2M) module or not:
 
@@ -39,7 +40,8 @@ Two versions of the Launcher are included depending on whether you have an i2c2m
     | EX Multisample | x+2        | tt02.txt     | Script 2   |
     | EX Wavetable   | x+3        | tt03.txt     | Script 3   |
     | i2c2midi       | x+4        | tt05.txt     | Script 4   |
-
+    | Mutable        | x+5.       | tt06.txt.    | Script 5   |
+    
     You’re welcome to exclude or re-order scenes as you see fit, just be sure to go into the Launcher .txt file and delete or move the contents of the associated script (1-4) into whatever script matches the scene’s new location. E.g., if you only want to install the i2c2midi variant, you can load the launcher as tt00.txt, the i2c2midi scene as tt01.txt, and then copy the contents of the Launcher's script 4 into script 1. You may also edit the scene description and the last number in the "G.GBX…" line in the Launcher’s Init script to reflect the total number of variant scenes installed.
 
 
@@ -57,8 +59,12 @@ Two versions of the Launcher are included depending on whether you have an i2c2m
 - **TR 1 OUT** Triggers whenever a new chord is played. Typical use-case is triggering an envelope for further processing chords with Eurorack effects.
 - **TR 2 OUT** Triggers whenever the arranger moves to a new pattern. This can be used to trigger events elsewhere in your system corresponding with new song sections. Try S&H or a sequential switch.
 - **TR 3 OUT** Primary trigger for the harmonizer output.
-- **TR 4 OUT** Alternate trigger output for the harmonizer that adds rests when duplicate notes are detected within the active chord step/bar. "Transitional" duplicate notes that occur across steps/bars are allowed to pass for consistent behavior during chord changes.
-- **Param Knob** Used to set velocity of the i2c chord output. Note that the readout on the Teletype dashboard is for the last-sent chord. Levels can get quite hot so turn this down if you’re hearing unwanted distortion.
+- **TR 4 OUT** Alternate trigger output for the harmonizer that adds rests when duplicate notes are detected within the active chord step/bar.
+"Transitional" duplicate notes that occur across steps/bars are allowed to pass for consistent behavior during chord changes.
+- **CV 1** Outputs root note in all variants
+- **CV 2** Outputs second note in chord except for Mutable variant in which case this outputs CV for the Harmonics input on Plaits.
+- **CV 3** Outputs third note in chord except for Mutable variant in which case this can be fed to Plaits' Level input to control the LPG via Param knob.
+- **Param Knob** Used to set velocity of the i2c chord output. Note that the readout on the Teletype dashboard is for the last-sent chord. Levels can get quite hot so turn this down if you’re hearing unwanted distortion. On the Mutable/Plaits variant, this is used to set the voltage sent to Level when the sequence is running (and mute the output when IN 2 is triggered).
 
 
 ## Grid Chord View
@@ -110,6 +116,11 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 - Script $ 2 does a hacky job translating N.CS into the I2M.C op so you can then apply chord transformations. 
 - While X can be changed to extend the number of intervals in the chord output, it can also throw off the Sync used for Every X in $ 3. You will also need to change the chord length for the i2m variant using I2M.C.L.
 - Strumming in I2M mode doesn't always work as expected, likely because of the method of holding notes until the next note is played.
+
+### Mutable
+- Requires installation of one of the custom Plaits firmwares listed in the source. The _extended file contains 7th chords while the _triad file only contains the first 3 notes and adds the root note one octave up.
+- Due to a bug in the Teletype source code, the order of the last two scales is different from what is listed in the Teletype manual. They are locrian and mixolydian, respectively.
+- Send CV 1 out to Plaits' V/Oct, CV 2 to HARMO, and CV 3 to Level. Use the param knob to set the level and amount of LPG/LPFA.
 
 ### Creating New Variants
 - To make variants for other polyphonic i2c devices, you'll likely just need to change script $ 2.
