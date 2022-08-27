@@ -91,8 +91,8 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 	- 4-dorian	
 	- 5-phrygian
 	- 6-lydian
-	- 7-mixolydian
-	- 8-locrian
+	- 7-locrian (should be mixolydian, see https://github.com/monome/teletype/issues/289)
+	- 8-mixolydian (should be locrian, see https://github.com/monome/teletype/issues/289)
  - **Harmonizer Intervals** The button at the bottom of column 11 toggles the harmonizer output on CV 4 between 3 or 4 intervals per chord (e.g. Cmaj vs. Cmaj7). The pitch range of the output sequence will be reduced when 4 intervals are enabled since it now takes an extra semitone to wrap to the next octave.
  - **Chord/Pattern Arranger switch**  The button in the bottom right corner switches back to the Chord View.
 
