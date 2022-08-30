@@ -100,6 +100,7 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 ## Variant Notes
 
 ### Just Friends
+- The volume range gets extremely loud in case you want to use the independent outs on JF. Turn down the param knob on Teletype if using Mix out.
 - Just using 3 voices here although you can play with adding more voices by modifying X.
 - Although chords will be held, JF's envelope will limit how long they play when Transient mode is engaged.
 - Alternatively, Sustain mode may be used with an envelope triggered by Teletype's TR 1.	
