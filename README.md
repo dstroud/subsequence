@@ -72,7 +72,7 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 - **Chord/Pattern Arranger switch** _The button in the bottom right corner switches between Chord View and Pattern Arranger View.
 
 ## Grid Pattern Arranger View
-![subsequence_arranger_view](https://user-images.githubusercontent.com/435570/185812860-f948bdf3-9ecd-4070-86c5-596537456bbe.svg)
+![subsequence_arranger_view](https://user-images.githubusercontent.com/435570/187570196-07e7dc44-d02e-49be-8c25-026991be8f5e.svg)
 
 - **Pattern Arranger** Rows 1-4 are the Pattern Arranger, where each row corresponds to patterns 1-4 in the Chord View. The Pattern Arranger progresses from left-to-right when Follow Mode is enabled. The Pattern Arranger loops to step 1 once it reaches the first blank column (i.e each step must be explicity set since there are no buttons to set loop length directly).
 - **Follow Mode toggle** As in Chord View, row 6 on column 16 enables (bright) or disables (dim) Follow Mode. When Follow Mode is enabled, the active pattern is determined by the Pattern Arranger. When disabled, the current chord sequence will loop indefinitely.
