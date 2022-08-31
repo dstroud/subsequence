@@ -85,9 +85,9 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 	- 5-phrygian
 	- 6-lydian
 	- 7-locrian (should be mixolydian, see https://github.com/monome/teletype/issues/289)
-	- 8-mixolydian (should be locrian, see https://github.com/monome/teletype/issues/289)
-- **Chord Notes** The button at the bottom of column 11 toggles between triads (dim) and 7th chord (illuminated).
-- **Harmonizer Notes** The button at the bottom of column 12 toggles the harmonizer output on CV 4 between triad (dim) and 7th chord (illuminated) quantization. The pitch range of the output sequence will be reduced when the button is illuminated since it now takes an extra semitone to get to the next octave.
+	- 8-mixolydian (should be locrian, same issue as above)
+- **Chord Mode** The button at the bottom of column 11 toggles between triads (off) and 7th chord (on).
+- **Harmonizer Mode** The button at the bottom of column 12 toggles the harmonizer output on CV 4 between triad (off) and 7th chord (on) quantization. The pitch range of the output sequence will be reduced when the button is illuminated since it now takes an extra semitone to get to the next octave.
 - **Chord/Pattern Arranger switch**  The button in the bottom right corner switches back to the Chord View.
 
 
@@ -111,11 +111,11 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 
 ### Plaits
 - Requires installation of one of the custom Plaits firmwares listed in the source. The _extended file contains 7th chords while the _triad file only contains the first 3 notes and adds the root note one octave up.
-- Due to a bug in the Teletype source code, the order of the last two scales is different from what is listed in the Teletype manual. They are locrian and mixolydian, respectively.
+- Due to a bug in the Teletype source code, the order of the last two scales is different from what is listed in the Teletype manual. They are locrian and mixolydian, respectively. This will require updating the lookup values in PN 2 once the issue has been resolved.
 - Send CV 1 out to Plaits' V/Oct, CV 2 to HARMO, and CV 3 to Level. Use the param knob to set the level and amount of LPG/LPFA.
 
 ### Creating New Variants
-- To make variants for other polyphonic i2c devices, you'll likely just need to change script $ 2.
+- To make variants for other polyphonic i2c devices, you'll likely just need to change script $ 2 which handles the chord bits.
 - If you'd like to send the harmonizer output somewhere other than CV 4 (like to an i2c device), change script $ 3.
 
 
