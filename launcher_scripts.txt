@@ -1,0 +1,54 @@
+In order to use Subsequence, you'll need to do some light editing of the tt01_subsequence_launcher.txt file to tell it which module-specific scenes you'll be using. Each scene requires its own initialization script.
+
+INSTRUCTIONS: 
+
+1. For each of the scenes/modules you'll be using, find it's initialization script below and copy it to an available script slot (#1 - #6) in the tt01_subsequence_launcher.txt file. Make sure to remember the order of the scenes/modules for the next step and for renaming the scenes prior to loading on to Teletype!
+
+
+2. Update the first part of the Launcher's description to list the scenes/modules you have pasted in. This will remind you which button launches which scene.
+
+
+3. Update variable A in the Launcher's #I script to indicate how many scenes you've loaded. This just makes sure we have buttons to launch each one.
+
+4. Rename the scenes you'll be loading on to Teletype so they are in the same order as when you pasted in the initialization scripts. If the Launcher is loaded into slot tt00.txt, initialization script #1 would correspond to tt01.txt, etc...
+
+
+
+--------JUST FRIENDS---------- Copy script between these lines
+IF STATE $: BRK
+G.GBX 12 14 10 7 1 1 1 3 5 1 1
+JF.MODE 1
+PARAM.SCALE 0 500
+------------------------------ Copy script between these lines
+
+
+----DISTING EX MULTISAMPLE----
+IF STATE $: BRK
+G.GBX 12 14 10 7 1 1 1 3 5 1 1
+EX.ALG 3
+PARAM.SCALE 0 1000
+------------------------------ 
+
+
+-----DISTING EX WAVETABLE-----
+IF STATE $: BRK
+G.GBX 12 14 10 7 1 1 1 3 5 1 1
+EX.ALG 10
+PARAM.SCALE 0 1000
+------------------------------
+
+
+-----------I2C2MIDI----------- THIS SCRIPT REQUIRES I2M BETA 2 OR LATER
+IF STATE $: BRK
+G.GBX 12 14 10 7 1 1 1 3 5 1 1
+PARAM.SCALE 0 127
+I2M.C.CLR 0; X 2
+L 1 4: I2M.C.INS 0 0 0
+I2M.C.L 0 3; I2M.S 48; I2M.T 0
+------------------------------
+
+
+------------PLAITS------------
+IF STATE $: BRK
+PARAM.SCALE 0 16383
+------------------------------

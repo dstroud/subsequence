@@ -1,10 +1,9 @@
 SUBSEQUENCE
-I2C2MIDI v.1
+I2C2MIDI V.2
 
 SCALE: %8
-CV 4 INTERVALS: %7
-VELOCITY: %9
 
+@MODULARBEAT
 CV IN: HARMONIZER
 IN 1: ADVANCE CHORD
 IN 2: STOP CHORD
@@ -26,18 +25,18 @@ IF && I T: J PN.NEXT 3
 IF && Y T: PN.I 3 0; J PN 3 0
 IF + I Y: $ 6; TR.P * 2 Y; Y 0
 IF && I != K J: TR.P 2
-K J; G.BTN.PR 15 1; $ 8; $ 9
+K J; G.BTN.PR 999 1; $ 8; $ 9
 
 #2
 IF STATE 2: I2M.C B K 0; BRK
-A * 12 A; J P 63; PRT 9 PRM
-EV X: I2M.C B K 0; B C; K A
-J N.CS A J C - I 1; CV I J
-I2M.C.SET C - I 1 VN - J N A
-EV X: I2M.C C A PRM; TR.P 1
+IF ! I: I2M.C B K 0; K + X 1
+J VN N.CS 0 P 63 C I; A * A 12
+I2M.C.L C K; I2M.C.SET C I J
+IF == I X: I2M.C C A PRM; K A
+CV * + I 1 < I 3 N + J A; B C
 
 #3
-I - PRT 7 1; K * / IN + I 1 12
+I P 62; K * / IN + I 1 12
 PRT 1 N.CS K P 63 C WRP IN 0 I
 CV 4 PRT 1; TR.P 3
 I OR != PRT 1 PRT 2 != J R
@@ -56,7 +55,7 @@ J G.BTNI; K G.BTNV; I LT J 12
 IF == J 13: T K
 IF I: Z - J 8; T 0
 IF I: G.BTN.V 13 0; $ 6
-IF == J 14: PRT 7 + G.BTNV 3
+IF > J 13: P + J 47 + K 2
 L 0 31: $ * 7 == J 12
 
 #6
@@ -76,19 +75,19 @@ IF ! P I: G.GBTN.V K 0; BRK
 G.BTN.SW + + * K 14 15 P I
 
 #8
-J == G.GRPI 8; G.GBTN.L 9 2 2
-K G.BTNI; G.BTN.L + D 8 6
-IF ! J: BRK
+G.GBTN.L 9 2 2; K G.BTNI
+G.BTN.L + D 8 6; J + * Z 8 K
+S: TR.P NZ J
+IF != G.GRPI 8: BRK
 PN 1 Z K; G.GBTN.L 8 3 3
-L 0 K: G.BTN.L I 13
-P.END + * Z 8 K
+L 0 K: G.BTN.L I 13; P.END J
 
 #M
+L 0 7: G.GBTN.L I 0 0; X P 61
 J P.NEXT; C ? J WRP J 1 7 C
-L 1 X: A > J 7; $ * 2 NZ J
-L 0 7: G.GBTN.L I 0 0
+L 0 X: A > J 7; $ * 2 NZ J
 G.GBTN.L WRP P.I 0 7 3 3
-L 15 30: G.GBTN.L I 2 2
+L 15 30: G.GBTN.L I 2 2; S.POP
 G.GBTN.L + PN.I 3 15 7 7
 
 #I
@@ -166,8 +165,8 @@ D PN.NEXT 3; PN.PREV 3; $ 8
 0	0	0	0
 0	0	0	0
 0	0	0	0
-0	0	0	0
-0	0	0	0
+2	0	0	0
+2	0	0	0
 0	0	0	0
 
 #G
