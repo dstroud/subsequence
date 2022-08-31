@@ -122,7 +122,7 @@ After choosing an option from the Launcher, you’ll find yourself in the Chord 
 ## Addendum
 
 
-![Subsequence flow](https://raw.githubusercontent.com/dstroud/subsequence/60eaadfa3bcb4954c74ffa0008013ef1d305bf59/Subsequence.drawio.svg)
+![Subsequence flow](https://raw.githubusercontent.com/dstroud/subsequence/24e83ba2f713837d8a8e3970636459db2a79ac47/Subsequence.drawio.svg)
 
 
 ### Variables
