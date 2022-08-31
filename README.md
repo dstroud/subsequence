@@ -18,12 +18,12 @@ Here are the supported modules as of V.2:
 - Just Friends
 - Disting EX SD Multisample
 - Disting EX Poly Wavetable Synth
-- i2c2midi (requires [Teletype I2M BETA 2 firmware](https://github.com/attowatt/i2c2midi/tree/main/firmware/teletype_firmware))
+- i2c2midi (requires [Teletype I2M BETA 2 or later firmware](https://github.com/attowatt/i2c2midi/releases))
 - Plaits (requires alternate firmware to enable Teletype chords)
-- No CV-specific variant exists YET but all versions except for Plaits output chord triads and the harmonizer over CV.
+- No CV-specific variant exists YET but all versions except for Plaits output chord triads and the harmonizer output over CV.
 
 
-## Installation
+## Installation and Launching Scenes
 
 1. Download the tt00_subsequence_launcher.txt file and rename it to the scene slot you wish to overwrite (e.g. tt00.txt).
 2. Download the variant scenes you want to use and rename the files using the following structure:
@@ -35,7 +35,7 @@ Here are the supported modules as of V.2:
     | EX Multisample | x+2        | tt02.txt     | Script #2  |
     | EX Wavetable   | x+3        | tt03.txt     | Script #3  |
     | i2c2midi       | x+4        | tt05.txt     | Script #4  |
-    | Plaits        | x+5        | tt06.txt     | Script #5  |
+    | Plaits         | x+5        | tt06.txt     | Script #5  |
     
 3. Edit tt00_subsequence_launcher.txt per the instructions in launcher_scripts.txt
 4. Drop the scenes on a thumb drive and plug into into Teletype. Make sure to delete those files off the thumb drive afterward so you don’t inadvertently overwrite a scene the next time you plug in the drive.
